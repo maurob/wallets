@@ -8,6 +8,10 @@ from .natives import chains
 logger = logging.getLogger(__name__)
 
 
+def create_blocks_time_dict(when: str):
+    raise NotImplementedError
+
+
 def latest_blocks_time_dict(chains=chains):
     blocks_dict = {"latest": True}
     for chain in chains:

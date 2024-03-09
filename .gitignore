@@ -111,3 +111,5 @@ node_modules
 
 ## Home for docker image, to keep session context.
 .home/
+
+kkit_config.json

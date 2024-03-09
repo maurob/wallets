@@ -18,13 +18,10 @@ def gather(wallets: list, block_ids: dict):
     df = pd.DataFrame(columns="chain wallet amount symbol price amount_usd".split())
     for chain, Asset, new_asset, wallet in track(cases, description="Getting assets info"):
         if new_asset:
-            if chain == Chain.BINANCE:
-                asset = Asset(chain, "latest")
-            else:
-                asset = Asset(chain, block_ids[chain])
+            asset = Asset(chain, block_ids[chain])
 
         if chain == Chain.BINANCE and Asset == natives.Coin:
-            continue
+            continue  # TODO: Fix BNB price
 
         amount = asset.balance(wallet["address"]).amount
         if amount != 0:
