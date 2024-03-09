@@ -26,7 +26,7 @@ classifiers = [
 dependencies = [
   "rich == 13.7",
   "defyes @ git+https://github.com/karpatkey/defyes.git@719a2d3",
-  "pyyaml == 6.0",
+  "pyyaml >= 6.0",
   "typer == 0.9",
 ]
 
