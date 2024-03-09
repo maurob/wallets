@@ -30,6 +30,9 @@ dependencies = [
   "typer == 0.9",
 ]
 
+[project.scripts]
+wallets = "wallets.cli:app"
+
 [project.urls]
 Issues = "https://github.com/maurob/wallets/issues"
 Source = "https://github.com/maurob/wallets"
