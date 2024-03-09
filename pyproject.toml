@@ -1,0 +1,74 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "wallets"
+description = ""
+dynamic = ["version"]
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "Mauro Bruni", email = "maumarbru@gmail.com" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+
+dependencies = [
+]
+
+[project.urls]
+Issues = "https:///issues"
+Source = "https://"
+Homepage = "https://"
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "_version.py"
+
+[tool.hatch.build.targets.wheel]
+packages = [
+  "src/wallets",
+]
+exclude = [
+  "src/wallets/tests",
+]
+
+# Linter configuruation.
+[tool.isort]
+profile = "black"
+atomic = true
+extend_skip_glob = "migrations,scripts"
+line_length = 120
+
+[tool.pytest.ini_options]
+python_files = "test_*.py tests.py"
+
+[tool.black]
+line_length = 120
+
+[tool.flake8]
+extend-exclude = [
+    '.git',
+    '__pycache__',
+]
+extend-ignore = [
+    'W503',  # Line break occurred before a binary operator. Using just W504 instead.
+]
+max-line-length = 120
+max-complexity = 18
+# Specify the list of error codes you wish Flake8 to report.
+select = ['B', 'C', 'E', 'F', 'W', 'T4', 'B9']
+# Parallelism
+jobs = 4
