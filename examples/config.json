@@ -1,0 +1,31 @@
+{
+  "apikeys": {
+    "etherscan": "",
+    "polscan": "",
+    "gnosisscan": "",
+    "bscscan": "",
+    "snowtrace": "",
+    "ftmscan": "",
+    "ethplorer": "",
+    "optimisticetherscan": "",
+    "arbiscan": "",
+    "zapper": "",
+    "metisexplorer": "",
+    "basescan": ""
+  },
+  "nodes": {
+    "ethereum": ["https://eth-pokt.nodies.app/"],
+    "polygon": ["https://polygon-pokt.nodies.app/"],
+    "gnosis": [],
+    "metis": [],
+    "base": [],
+    "binance": ["https://bsc-pokt.nodies.app/"],
+    "avalanche": [],
+    "fantom": [],
+    "ropsten": [],
+    "kovan": [],
+    "goerli": [],
+    "optimism": [],
+    "arbitrum": []
+  }
+}

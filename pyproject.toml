@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "wallets"
-description = ""
+description = "Application to get ballances and prices for a list of wallets."
 dynamic = ["version"]
 readme = "README.md"
 requires-python = ">=3.10"
@@ -24,15 +24,22 @@ classifiers = [
 ]
 
 dependencies = [
+  "rich == 13.7",
+  "defyes @ git+https://github.com/karpatkey/defyes.git@719a2d3",
+  "pyyaml == 6.0",
+  "typer == 0.9",
 ]
 
 [project.urls]
-Issues = "https:///issues"
-Source = "https://"
-Homepage = "https://"
+Issues = "https://github.com/maurob/wallets/issues"
+Source = "https://github.com/maurob/wallets"
+Homepage = "https://github.com/maurob/wallets"
 
 [tool.hatch.version]
 source = "vcs"
+
+[tool.hatch.metadata]
+allow-direct-references = true
 
 [tool.hatch.build.hooks.vcs]
 version-file = "_version.py"
