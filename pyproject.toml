@@ -22,12 +22,22 @@ classifiers = [
   "Programming Language :: Python :: Implementation :: CPython",
   "Programming Language :: Python :: Implementation :: PyPy",
 ]
-
 dependencies = [
   "rich == 13.7",
   "defyes @ git+https://github.com/karpatkey/defyes.git@719a2d3",
   "pyyaml >= 6.0",
   "typer == 0.9",
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest >= 7.2.2",
+]
+lint = [
+  "black == 23.3.0",
+  "flake8 == 6.0.0",
+  "isort == 5.12.0",
+  "flake8-pyproject == 1.2.3",
 ]
 
 [project.scripts]
