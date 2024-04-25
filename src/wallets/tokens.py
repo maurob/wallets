@@ -45,8 +45,19 @@ class USDT(Erc20):
 
 
 class USDC(Erc20):
+    """
+    Native USDC from Circle.
+    """
     default_addresses: dict[str, str] = {
         Chain.ETHEREUM: Addr("0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"),
+        Chain.POLYGON: Addr("0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359"),
+    }
+
+
+class USDCe(Erc20):
+    """Bridged USDC"""
+    default_addresses: dict[str, str] = {
+        Chain.POLYGON: Addr("0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174"),
     }
 
 
