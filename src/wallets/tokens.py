@@ -60,6 +60,8 @@ class USDCe(Erc20):
         Chain.POLYGON: Addr("0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174"),
     }
 
+    symbol = "USDC.e"
+
 
 class WETH(Erc20):
     default_addresses: dict[str, str] = {
